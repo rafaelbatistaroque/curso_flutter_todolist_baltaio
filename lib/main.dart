@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _buildAppBar() {
     return AppBar(
-      title: Text("ToDo List"),
+      title: Text("To Do List"),
       centerTitle: true,
     );
   }

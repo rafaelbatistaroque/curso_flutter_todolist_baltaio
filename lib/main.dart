@@ -44,6 +44,10 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  Widget buildInputBoxAddTask() {
+    return FormField();
+  }
+
   Widget _buildListTask() {
     return ListView.builder(
       itemCount: widget.items.length,
@@ -52,6 +56,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildTask(BuildContext context, int index) {
-    return Text(widget.items[index].title);
+    final item = widget.items[index];
+    return CheckboxListTile(
+      key: Key(item.title),
+      title: Text(item.title),
+      value: item.done,
+      onChanged: (value) {},
+    );
   }
 }
